@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    background: #262a30;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qr-app {
+    min-width: 400px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.20);
+    /* position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%; */
+}
+
+.qr-app h3 {
+    width: 100%;
+    text-align: left;
+}
+
+.qr-app input {
+    width: 100%;
+    margin-top: 20px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #dbdbe1;
+}
+
+#qr-image {
+    max-width: 200px;
+    max-height: 0;
+    margin: 10px;
+    transition: max-height 1s;
+}
+
+#qr-image.effect {
+    max-height: 200px;
+}
+
+
+
+.qr-app button {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background: #434fd8;
+    color: #fff;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.20);
+    margin-top: 10px;
+    position: relative;
+    object-fit: cover;
+    overflow: hidden;
+
+}
+
+.qr-app button .effect {
+    width: 0;
+    height: 100%;
+    background: #d8435c;
+    transition: 1s;
+}
+
+.qr-app button p {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+}
+
+.qr-app button:hover .effect {
+    width: 100%;
+    transition: 0.3s;
+}
+
+.qr-app button:active {
+    transform: scale(1.05);
+}
+
+.error {
+    animation: shake 0.25s infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(0px, 0px);
+    }
+    20% {
+        transform: translate(3px, -3px);
+    }
+    40% {
+        transform: translate(0px, 0px);
+    }
+    60% {
+        transform: translate(-3px, 3px);
+    }
+    80% {
+        transform: translate(0px, 0px);
+    }
+    100% {
+        transform: translate(3px, -3px);
+    }
+}
